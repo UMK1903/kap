@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url="https://www.kap.org.tr/tr/bildirim-sorgu?member=4028e4a1413b7ef401413bc2251e0047"#Our url which will we read
+url="http://guzelsozlerblog.com/gunun-sozu" #Our url which will we read
 
 response=requests.get(url) #Go to URL
 response.encoding= "iso-8859-9" #Web site's charset --> <meta http-equiv="content-type" content="text/html; charset=iso-8859-9">
@@ -21,8 +21,8 @@ gonderilecekYazi="" #we will sent this to telegram chat
 for i in range(0,len(sozler)): #iterate from 0 to length of our list
     gonderilecekYazi+=sozler[i].contents[0].text +": "+sozler[i].contents[2]+"\n\n"
 
-token = "AAHvfHepWgNprrTLzmZp7h-D7_8kPeT6s64" #telegram token
-chat_id = "1252889534" #telegram id
+token = "309763441:AAGSg428wxoneR82YrFphrphqmr6n97cz_Y" #telegram token
+chat_id = "253529798" #telegram id
 
-requests.post(url='https://api.telegram.org/bot1252889534:AAHvfHepWgNprrTLzmZp7h-D7_8kPeT6s64/sendMessage'.format(token), data={'chat_id': 1252889534, 'text': gonderilecekYazi}).json()
+requests.post(url='https://api.telegram.org/bot{0}/sendMessage'.format(token), data={'chat_id': 253529798, 'text': gonderilecekYazi}).json()
 #telegram sendMessage url, more commands --> https://core.telegram.org/bots
