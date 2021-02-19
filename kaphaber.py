@@ -21,8 +21,8 @@ gonderilecekYazi="" #we will sent this to telegram chat
 for i in range(0,len(sozler)): #iterate from 0 to length of our list
     gonderilecekYazi+=sozler[i].contents[0].text +": "+sozler[i].contents[2]+"\n\n"
 
-token = "309763441:AAGSg428wxoneR82YrFphrphqmr6n97cz_Y" #telegram token
-chat_id = "253529798" #telegram id
+token = "1252889534:AAHvfHepWgNprrTLzmZp7h-D7_8kPeT6s64" #telegram token
+chat_id = "1252889534" #telegram id
 
 requests.post(url='https://api.telegram.org/bot{0}/sendMessage'.format(token), data={'chat_id': 253529798, 'text': gonderilecekYazi}).json()
 #telegram sendMessage url, more commands --> https://core.telegram.org/bots
