@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url="http://guzelsozlerblog.com/gunun-sozu" #Our url which will we read
+url="https://www.kap.org.tr/tr/bildirim-sorgu?member=4028e4a1413b7ef401413bc2251e0047"#Our url which will we read
 
 response=requests.get(url) #Go to URL
 response.encoding= "iso-8859-9" #Web site's charset --> <meta http-equiv="content-type" content="text/html; charset=iso-8859-9">
