@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-url="http://guzelsozlerblog.com/gunun-sozu"
+url="http://https://www.kap.org.tr/tr/sirket-bilgileri/ozet/4028e4a1413b7ef401413bc2251e0047"
 response=requests.get(url)
 <span style="color:#ff0000;">response.encoding= "iso-8859-9"</span> #Bu kod ile çektiğimiz verideki "ş,ç,i" gibi karakterlerde çıkabilecek problemleri önlüyoruz.
 AnalizEdilecekIcerik=response.text
@@ -8,14 +8,14 @@ icerigiAl=BeautifulSoup(AnalizEdilecekIcerik,"lxml")
 
 import requests
 from bs4 import BeautifulSoup
-url="http://guzelsozlerblog.com/gunun-sozu"
+url="https://www.kap.org.tr/tr/sirket-bilgileri/ozet/4028e4a1413b7ef401413bc2251e0047"
 response=requests.get(url)
 print(response.text)
 AnalizEdilecekIcerik=response.text #Sayfadan gelen HTML kodunu atadık
 
 
 import requests #requests kütühanemizi dahil ettik
-url="http://guzelsozlerblog.com/gunun-sozu" #web sayfası URL sini atadık
+url="https://www.kap.org.tr/tr/sirket-bilgileri/ozet/4028e4a1413b7ef401413bc2251e0047" #web sayfası URL sini atadık
 response=requests.get(url) #kütüphane yardımıyla web sayfasına gittik
 print(response.text) #web sayfasının çıktısını yazdırdık
 
@@ -23,7 +23,7 @@ print(response.text) #web sayfasının çıktısını yazdırdık
 import requests
 from bs4 import BeautifulSoup
 
-url="http://guzelsozlerblog.com/gunun-sozu" #Our url which will we read
+url="https://www.kap.org.tr/tr/sirket-bilgileri/ozet/4028e4a1413b7ef401413bc2251e0047" #Our url which will we read
 
 response=requests.get(url) #Go to URL
 response.encoding= "iso-8859-9" #Web site's charset --> <meta http-equiv="content-type" content="text/html; charset=iso-8859-9">
