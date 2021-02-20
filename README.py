@@ -1,8 +1,3 @@
-#CSS ile de filtreleyebiliriz, ben bunu tercih ediyorum.
-sozler=icerigiAl.select("div#PageContent")
-for i in range(0,len(sozler)): #döngüyü, aldığımız dönütün uzunluğu ile sınırlandırıyoruz.
-print(sozler[i].contents[0].text +": "+sozler[i].contents[2]+"\n") #Etiket içeriklerini çekip yazdırıyoruz.
-
 import requests
 from bs4 import BeautifulSoup
 url="http://guzelsozlerblog.com/gunun-sozu"
@@ -10,16 +5,6 @@ response=requests.get(url)
 <span style="color:#ff0000;">response.encoding= "iso-8859-9"</span> #Bu kod ile çektiğimiz verideki "ş,ç,i" gibi karakterlerde çıkabilecek problemleri önlüyoruz.
 AnalizEdilecekIcerik=response.text
 icerigiAl=BeautifulSoup(AnalizEdilecekIcerik,"lxml")
-
-
-print(filtre) #tüm filtreyi yazdırdık
-print(filtre[0]) #filtreden gelen verinin sadece 0.indexine ait içe
-
-filtre=icerigiAl.find_all(id="PageContent") #id değeriyle filtreleme yaptık
-
-icerigiAl=BeautifulSoup(AnalizEdilecekIcerik,"lxml") #BS4 HTML kodunu analiz ediyor
-#"lxml" parametresini kütüphanenin bize verdiği uyarı gereği kullandık. Parametresiz veya diğer parametreler ile kullanabilirsiniz. Bu parametre hakkında daha fazla bilgi için--&gt; https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser
-
 
 import requests
 from bs4 import BeautifulSoup
